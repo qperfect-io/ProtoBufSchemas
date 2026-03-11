@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "tracefile/mpocircuit.proto";
+import "mpssim/mpssim.proto";
 import "mimiqcircuits/circuit.proto";
 
 

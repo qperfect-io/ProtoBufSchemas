@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+message FlatTensor {
+    repeated int64 dims = 1;
+    bool is_complex = 2;
+    repeated double data = 3;
+}
+
+message MPS {
+    int64 num_tensors = 1;
+    int64 num_qubits = 2;
+    repeated int64 physical_dims = 3;
+    int64 max_bond_dim = 4;
+    repeated int64 bond_dims = 5;
+    repeated FlatTensor tensors = 6;
+    int64 ortho_center = 7;
+}
+
+enum MpoNorm {
+    OPERATOR = 0;
+    TRACE = 1;
+}
+
+message MPO {
+    int64 num_tensors = 1;
+    int64 num_qubits = 2;
+    repeated int64 physical_dims = 3;
+    int64 max_bond_dim = 4;
+    repeated int64 bond_dims = 5;
+    repeated FlatTensor tensors = 6;
+    int64 ortho_center = 7;
+    MpoNorm norm = 8;
+}
+
+message ClassicalState {
+    repeated bool bits = 1;
+}
+
+message ComplexState {
+    repeated double values = 1;
+}
+
+message MPSState {
+    MPS q = 1;
+    ClassicalState c = 2;
+    ComplexState z = 3;
+}
+
+message MpoCircuit {
+    repeated MPO mpos = 1;
+}
