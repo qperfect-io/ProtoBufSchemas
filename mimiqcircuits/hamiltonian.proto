@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "pauli.proto";
+import "mimiqcircuits/pauli.proto";
 
 message HamiltonianTerm {
     double coefficient = 1;

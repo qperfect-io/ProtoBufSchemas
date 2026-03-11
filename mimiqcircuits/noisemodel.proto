@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "circuit.proto";
+import "mimiqcircuits/circuit.proto";
 
 // ===============================
 //  Noise Model Schema

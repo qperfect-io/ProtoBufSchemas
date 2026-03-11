@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-import "circuit.proto";
-import "qcsresults.proto";
-import "hamiltonian.proto";
+import "mimiqcircuits/circuit.proto";
+import "mimiqcircuits/qcsresults.proto";
+import "mimiqcircuits/hamiltonian.proto";
 
 message ParametersDictItem {
   Symbol key = 1;

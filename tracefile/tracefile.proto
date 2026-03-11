@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "tracefile/mpocircuit.proto";
+import "mimiqcircuits/circuit.proto";
+
+
+message Tracefile {
+    Circuit mimiq_circuit = 1;
+    MpoCircuit mpo_circuit = 2;
+
+    map<int64, int64> inst_to_mpo = 3;
+    map<int64, int64> mpo_to_inst = 4;
+}

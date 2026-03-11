@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+message Mpo {
+    int64 nb_tensors = 1;
+    int64 nb_qubits = 2;
+    repeated int64 bondims = 3;
+    int64 max_bondim = 4;
+    int65 ocean = 5;
+}
+
+
+message MpoCircuit {
+    repeated Mpo = 1;
+}
+

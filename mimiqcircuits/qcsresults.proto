@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "bitvector.proto";
+import "mimiqcircuits/bitvector.proto";
 
 message ComplexDouble {
     double real = 1;
