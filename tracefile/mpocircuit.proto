@@ -10,6 +10,6 @@ message Mpo {
 
 
 message MpoCircuit {
-    repeated Mpo = 1;
+    repeated Mpo mpos = 1;
 }
 
