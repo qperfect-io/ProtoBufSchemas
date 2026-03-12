@@ -12,6 +12,6 @@ message Tracefile {
     Circuit mimiq_circuit = 1;
     MpoCircuit converted_circuit = 2;
 
-    repeated Pair inst_to_mpo = 3;
+    repeated Pair inst_to_conv = 3;
     repeated MPSState state_evolution = 4;
 }
