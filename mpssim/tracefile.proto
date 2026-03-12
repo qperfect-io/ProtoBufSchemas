@@ -10,8 +10,8 @@ message Pair {
 
 message Tracefile {
     Circuit mimiq_circuit = 1;
-    MpoCircuit mpo_circuit = 2;
+    MpoCircuit converted_circuit = 2;
 
     repeated Pair inst_to_mpo = 3;
-    repeated MPSState state = 4;
+    repeated MPSState state_evolution = 4;
 }
