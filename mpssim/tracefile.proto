@@ -3,11 +3,15 @@ syntax = "proto3";
 import "mpssim/mpssim.proto";
 import "mimiqcircuits/circuit.proto";
 
+message Pair {
+    int64 first = 1;
+    int64 second = 2;
+}
 
 message Tracefile {
     Circuit mimiq_circuit = 1;
     MpoCircuit mpo_circuit = 2;
 
-    map<int64, int64> inst_to_mpo = 3;
-    map<int64, int64> mpo_to_inst = 4;
+    repeated Pair inst_to_mpo = 3;
+    repeated MPSState state = 4;
 }
