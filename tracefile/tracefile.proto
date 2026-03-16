@@ -22,7 +22,7 @@ message StateInfo {
     oneof state {
         StateVectorLight sv = 2;
         MPSLight mps = 3;
-        TensorWeaver tensorweaver = 4;
+        TensorWeaverLight tensorweaver = 4;
     }
 
     ClassicalState c = 5;
@@ -30,7 +30,7 @@ message StateInfo {
 }
 
 
-message TracefileCommon {
+message Tracefile {
     Backend backend = 1;
     Circuit original_circuit = 2;
     Circuit optimized_circuit = 3;
