@@ -1,0 +1,3 @@
+message StateVectorLight {
+    int64 sv_size = 2;
+}

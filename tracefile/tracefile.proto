@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+import "statevecsim/statevecsim.proto";
+import "mpssim/mpssim.proto";
+import "tensorweaver/tensorweaver.proto";
+import "mimiqcircuits/circuit.proto";
+
+message Pair {
+    int64 first = 1;
+    int64 second = 2;
+}
+
+enum Backend {
+    StateVector = 0;
+    MatrixProductState = 1;
+    TensorWeaver = 2;
+}
+
+message StateInfo {
+    int64 num_qubits = 1;
+
+    oneof state {
+        StateVectorLight sv = 2;
+        MPSLight mps = 3;
+        TensorWeaver tensorweaver = 4;
+    }
+
+    ClassicalState c = 5;
+    ComplexState z = 6;
+}
+
+
+message TracefileCommon {
+    Backend backend = 1;
+    Circuit original_circuit = 2;
+    Circuit optimized_circuit = 3;
+
+    repeated StateInfo state_evolution = 4;
+}
