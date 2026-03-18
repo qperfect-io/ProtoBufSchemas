@@ -31,11 +31,10 @@ message MPO {
 
 message MPSLight {
     int64 num_tensors = 1;
-    int64 num_qubits = 2;
-    repeated int64 physical_dims = 3;
-    int64 max_bond_dim = 4;
-    repeated int64 bond_dims = 5;
-    int64 ortho_center = 7;
+    repeated int64 physical_dims = 2;
+    int64 max_bond_dim = 3;
+    repeated int64 bond_dims = 4;
+    int64 ortho_center = 5;
 }
 
 enum MpoNorm {
