@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "utils/utils.proto";
+
 
 message FlatTensor {
     repeated int64 dims = 1;
@@ -52,18 +54,10 @@ message MPOLight {
     MpoNorm norm = 8;
 }
 
-message ClassicalState {
-    repeated bool bits = 1;
-}
-
-message ComplexState {
-    repeated double values = 1;
-}
-
 message MPSState {
     MPS q = 1;
-    ClassicalState c = 2;
-    ComplexState z = 3;
+    BitVector c = 2;
+    ComplexVector z = 3;
 }
 
 message MpoCircuit {

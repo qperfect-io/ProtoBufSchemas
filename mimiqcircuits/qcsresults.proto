@@ -1,15 +1,9 @@
 syntax = "proto3";
 
 import "mimiqcircuits/bitvector.proto";
+import "utils/utils.proto";
 
-message ComplexDouble {
-    double real = 1;
-    double imag = 2;
-}
 
-message ComplexVector {
-    repeated ComplexDouble data = 1;
-}
 
 message AmplitudeEntry {
     BitVector key = 1;

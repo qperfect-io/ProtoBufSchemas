@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "utils/bitvector.proto";
+
+message ComplexDouble {
+    double real = 1;
+    double imag = 2;
+}
+
+message ComplexVector {
+    repeated ComplexDouble data = 1;
+}
+
+message BitVector {
+    int64 len = 1;
+    bytes data = 2;
+}
