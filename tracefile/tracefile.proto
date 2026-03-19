@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+import "utils/utils.proto";
 import "statevecsim/statevecsim.proto";
 import "mpssim/mpssim.proto";
 import "tensorweaver/tensorweaver.proto";
@@ -26,8 +27,8 @@ message StateInfo {
         TensorWeaverLight tensorweaver = 4;
     }
 
-    ClassicalState c = 5;
-    ComplexState z = 6;
+    BitVector c = 5;
+    ComplexVector z = 6;
 }
 
 
