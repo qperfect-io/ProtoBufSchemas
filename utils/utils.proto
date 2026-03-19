@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-import "utils/bitvector.proto";
 
 message ComplexDouble {
     double real = 1;
