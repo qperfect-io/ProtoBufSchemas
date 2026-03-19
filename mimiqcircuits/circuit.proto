@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "mimiqcircuits/bitvector.proto";
+import "utils/utils.proto";
 import "mimiqcircuits/pauli.proto";
 
 enum Irrational {
